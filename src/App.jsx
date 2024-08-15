@@ -44,7 +44,21 @@ const weatherForecasts = [
 ];
 
 return (
-  <h1>Hello world!</h1>
+  <>
+    <h1>Weather Forecast</h1>
+    <section>
+      {weatherForecasts.map((forecast, index) => (
+        <WeatherForecast
+          key={index}
+          day={forecast.day}
+          img={forecast.img}
+          imgAlt={forecast.imgAlt}
+          conditions={forecast.conditions}
+          time={forecast.time}
+        />
+      ))}
+    </section>
+  </>
 );
 };
 
